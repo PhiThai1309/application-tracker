@@ -19,10 +19,18 @@ body {
 }
 
 h1 {
-  padding: var(--padding);
-  margin: 0 1rem;
+  padding: var(--padding) 0;
+  margin-left: 4rem;
   font-weight: 600;
   font-size: 35.84pt;
   line-height: 69px;
   color: #000000;
+}
+
+h5 {
+  font-size: 14.4pt;
+}
+
+p {
+  font-size: 12pt;
 }

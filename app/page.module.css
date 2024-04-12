@@ -4,8 +4,15 @@
   flex-direction: column;
 }
 
+.header__wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
 .body__container {
   flex: 1;
   background: #f3f4f6;
   border-radius: 56px 56px 0px 0px;
+  padding: 4rem;
 }
