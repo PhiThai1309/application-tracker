@@ -1,0 +1,35 @@
+.addCard__wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  min-height: 100vh;
+  background-color: rgba(128, 128, 128, 0.742);
+  z-index: 10;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card__container {
+  position: relative;
+  min-height: 40vh;
+  min-width: 80vw;
+  background-color: white;
+  border-radius: var(--border-radius);
+  padding: var(--padding);
+}
+
+.close__btn {
+  cursor: pointer;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  border: 0;
+  background-color: transparent;
+}
+
+.close__btn span {
+  color: black;
+}

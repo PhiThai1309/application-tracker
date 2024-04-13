@@ -27,8 +27,11 @@ body {
 h1 {
   font-weight: 600;
   font-size: 33.59pt;
-  line-height: 69px;
-  color: #000000;
+}
+
+h2 {
+  font-size: 27.99pt;
+  font-weight: 600;
 }
 
 h5 {
