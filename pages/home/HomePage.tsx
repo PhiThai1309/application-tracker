@@ -5,7 +5,7 @@ import AppListContainer from "@/app/components/appListContainer/appListContainer
 import AddCard from "@/app/components/addCard/addCard";
 import { useState } from "react";
 
-export const HomePage = () => {
+const HomePage = () => {
   const [show, setShow] = useState(false);
   return (
     <>
@@ -24,3 +24,4 @@ export const HomePage = () => {
     </>
   );
 };
+export default HomePage;
