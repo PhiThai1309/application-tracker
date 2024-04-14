@@ -10,7 +10,7 @@ export const HomePage = () => {
   return (
     <>
       <div className={styles.body__container}>
-        <h1>Application Tracker</h1>
+        <h2>Application Tracker</h2>
         <div className={styles.add__btn}>
           <AddBtn enable={setShow} />
         </div>
