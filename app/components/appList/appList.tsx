@@ -1,7 +1,11 @@
 import { Application, Status } from "@/app/model/Application";
 import styles from "./appList.module.css";
 
-const AppList: React.FC<Application> = (props) => {
+interface ApplicationStatus extends Application {
+  enumStatus: Record<string, number> | null;
+}
+
+const AppList: React.FC<ApplicationStatus> = (props) => {
   const dateObject = new Date(props.applicationDate.valueOf());
   const formattedDate = `${dateObject.getDate()}-${
     dateObject.getMonth() + 1
@@ -20,11 +24,10 @@ const AppList: React.FC<Application> = (props) => {
         className={styles.select__input}
         value={Status[props.status]}
       >
-        {Object.keys(Status)
-          .filter((key) => isNaN(Number(Status[key as keyof typeof Status]))) // Filter out numeric keys
-          .map((key) => (
-            <option key={key} value={Status[key as keyof typeof Status]}>
-              {Status[key as keyof typeof Status]}
+        {props.enumStatus &&
+          Object.entries(props.enumStatus).map(([name, value]) => (
+            <option key={value} value={name}>
+              {name}
             </option>
           ))}
       </select>
