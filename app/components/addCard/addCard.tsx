@@ -1,6 +1,7 @@
 import styles from "./addCard.module.css";
 
 interface AddCardProps {
+  enumData: Record<string, number> | null;
   enable: (value: boolean) => void;
 }
 
@@ -46,7 +47,12 @@ const AddCard: React.FC<AddCardProps> = (props) => {
           <div>
             <p className={styles.required}>Status</p>
             <select name="toys" id="toy-id" className={styles.select__input}>
-              <option value="New">New</option>
+              {props.enumData &&
+                Object.entries(props.enumData).map(([name, value]) => (
+                  <option key={value} value={name}>
+                    {name}
+                  </option>
+                ))}
             </select>
           </div>
           <div className={styles.submit_wrapper}>

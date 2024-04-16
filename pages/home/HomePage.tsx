@@ -57,7 +57,7 @@ const HomePage = () => {
       </div>
       {show && (
         <div className={`${styles.modal__container}`}>
-          <AddCard enable={setShow} />
+          <AddCard enable={setShow} enumData={enumData} />
         </div>
       )}
     </>
