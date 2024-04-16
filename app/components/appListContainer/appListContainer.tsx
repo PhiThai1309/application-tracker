@@ -6,6 +6,7 @@ import { Application } from "@/app/model/Application";
 
 const AppListContainer = () => {
   const [datas, setDatas] = useState<Application[]>([]);
+
   const fetchData = async () => {
     try {
       const response = await getApplication();

@@ -1,19 +1,19 @@
-export type Status = {
-  new: "new";
-  followUpEmail: "followUpEmail";
-  processing: "processing";
-  interview: "interview";
-  notResponse: "Not Response";
-  fail: "fail";
-};
+export enum Status {
+  "New" = 1,
+  "Follow Up Email" = 2,
+  "Processing" = 3,
+  "Interview" = 4,
+  "Not Response" = 5,
+  "Fail" = 6,
+}
 
 export type Application = {
   _id: String;
   companyName: String;
   position: String;
-  applicationDate: { type: Date; default: Date };
+  applicationDate: String;
   jd: String;
   hrEmail: String;
   applyThrough: String;
-  status: { type: Status; default: Status };
+  status: Status;
 };
