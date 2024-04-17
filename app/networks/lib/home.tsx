@@ -7,7 +7,9 @@ export function getApplication() {
 }
 
 export function postApplication(data: Record<string, string>) {
-  return axiosClient.post(baseUrl + "/create", data);
+  return axiosClient.post(baseUrl + "/create", data).then((data) => {
+    console.log(data);
+  });
 }
 
 export function getStatus() {

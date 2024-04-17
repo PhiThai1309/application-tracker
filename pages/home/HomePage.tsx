@@ -6,11 +6,13 @@ import AddCard from "@/app/components/addCard/addCard";
 import { useEffect, useState } from "react";
 import { Application } from "@/app/model/Application";
 import { getApplication, getStatus } from "@/app/networks/lib/home";
+import { useRouter } from "next/router";
 
 const HomePage = () => {
   const [show, setShow] = useState(false);
   const [enumData, setEnumData] = useState<Record<string, number> | null>(null);
   const [datas, setDatas] = useState<Application[]>([]);
+  const [reloadFlag, setReloadFlag] = useState(false); // New state to trigger data reload
 
   const fetchData = async () => {
     try {
@@ -44,7 +46,7 @@ const HomePage = () => {
   useEffect(() => {
     fetchData();
     createEnum();
-  }, []);
+  }, [reloadFlag]);
 
   return (
     <>
@@ -57,7 +59,13 @@ const HomePage = () => {
       </div>
       {show && (
         <div className={`${styles.modal__container}`}>
-          <AddCard enable={setShow} enumData={enumData} />
+          <AddCard
+            enable={setShow}
+            enumData={enumData}
+            reload={() => {
+              setReloadFlag(!reloadFlag); // Toggle reloadFlag to trigger data reload
+            }}
+          />
         </div>
       )}
     </>

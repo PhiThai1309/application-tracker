@@ -6,10 +6,10 @@ import { postApplication } from "@/app/networks/lib/home";
 interface AddCardProps {
   enumData: Record<string, number> | null;
   enable: (value: boolean) => void;
+  reload: () => void;
 }
 
 const AddCard: React.FC<AddCardProps> = (props) => {
-  // const [formData, setFormData] = useState(Application);
   function onClickHandler() {
     console.log("press enter");
     props.enable(false);
@@ -34,6 +34,8 @@ const AddCard: React.FC<AddCardProps> = (props) => {
     // console.log(formDataObject);
 
     postApplication(formDataObject);
+    props.enable(false);
+    props.reload();
   }
 
   return (
@@ -69,7 +71,7 @@ const AddCard: React.FC<AddCardProps> = (props) => {
               <input
                 type="date"
                 value={currentDate}
-                name={ApplicationEnum.applicationDate} // Convert to string
+                name={ApplicationEnum.applicationDate}
                 id={ApplicationEnum.applicationDate}
                 required
               />

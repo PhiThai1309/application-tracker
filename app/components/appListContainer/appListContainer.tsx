@@ -9,12 +9,14 @@ interface AppListContainerProps {
   enumData: Record<string, number> | null;
 }
 const AppListContainer: React.FC<AppListContainerProps> = (props) => {
+  console.log(props.datas);
   return (
     <div className={styles.list__container}>
       {/* render each  application in the list */}
       {props.datas.map((data) => (
         <AppList key={String(data._id)} enumStatus={props.enumData} {...data} />
       ))}
+      {props.datas.length < 1 && <div>There are no applications yet</div>}
     </div>
   );
 };
