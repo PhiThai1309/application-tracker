@@ -78,11 +78,7 @@ const AddCard: React.FC<AddCardProps> = (props) => {
             </div>
             <div>
               <p>JD</p>
-              <input
-                type="text"
-                name={ApplicationEnum.jd}
-                id={ApplicationEnum.jd}
-              />
+              <textarea name={ApplicationEnum.jd} id={ApplicationEnum.jd} />
             </div>
             <div>
               <p>HR Email</p>
