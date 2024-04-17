@@ -7,8 +7,18 @@ export enum Status {
   "Fail" = 6,
 }
 
+export enum ApplicationEnum {
+  companyName = "companyName",
+  position = "position",
+  applicationDate = "applicationDate",
+  jd = "jd",
+  hrEmail = "hrEmail",
+  applyThrough = "applyThrough",
+  status = "status",
+}
+
 export type Application = {
-  _id: String;
+  _id: String | null;
   companyName: String;
   position: String;
   applicationDate: String;

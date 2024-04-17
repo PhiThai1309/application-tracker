@@ -1,11 +1,17 @@
 import axiosClient from "../apiClient";
 
+const baseUrl = "/application";
+
 export function getApplication() {
-  return axiosClient.get("/application");
+  return axiosClient.get(baseUrl);
+}
+
+export function postApplication(data: Record<string, string>) {
+  return axiosClient.post(baseUrl + "/create", data);
 }
 
 export function getStatus() {
-  return axiosClient.get("/application/status");
+  return axiosClient.get(baseUrl + "/status");
 }
 
 // export function addProduct(data) {
