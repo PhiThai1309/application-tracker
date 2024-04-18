@@ -13,8 +13,8 @@ const AppList: React.FC<ApplicationStatus> = (props) => {
   }-${dateObject.getFullYear()}`;
 
   return (
-    <div className={styles.appList__wrapper} onClick={props.onClick}>
-      <div className={styles.appList__container}>
+    <div className={styles.appList__wrapper}>
+      <div className={styles.appList__container} onClick={props.onClick}>
         <p>{props.companyName}</p>
         <p>{props.position}</p>
         <p>{formattedDate}</p>

@@ -1,7 +1,7 @@
 import { FormEvent, useState, ReactNode } from "react";
 import styles from "./addCard.module.css";
 import { Application, ApplicationEnum, Status } from "@/app/model/Application";
-import { postApplication } from "@/app/networks/lib/home";
+import { editApplication, postApplication } from "@/app/networks/lib/home";
 import AddCardComponent from "./component/addCardComponent";
 
 interface AddCardProps {
@@ -51,12 +51,20 @@ const AddCard: React.FC<AddCardProps> = (props) => {
       // Add the value to the formDataObject using the field name as the key
       formDataObject[key] = value ? value.toString() : "";
     });
-
-    // console.log(formDataObject);
-    postApplication(formDataObject).then(() => {
-      props.enable(false);
-      props.reload();
-    });
+    console.log(formDataObject);
+    props.application
+      ? editApplication(formDataObject).then(() => {
+          props.enable(false);
+          props.reload();
+        })
+      : postApplication(formDataObject)
+          .then(() => {
+            props.enable(false);
+            props.reload();
+          })
+          .catch((err) => {
+            console.log(err);
+          });
   }
 
   // Initialize state variables based on ApplicationEnum
