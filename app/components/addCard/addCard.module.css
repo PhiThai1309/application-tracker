@@ -13,6 +13,14 @@
   justify-content: center;
 }
 
+.close {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
 .card__container {
   position: relative;
   min-height: 80vh;
@@ -20,6 +28,7 @@
   background-color: white;
   border-radius: var(--border-radius);
   padding: var(--padding);
+  z-index: 10;
 }
 
 .card__content {
@@ -30,6 +39,7 @@
   right: var(--padding);
   overflow: scroll;
   overscroll-behavior-y: none;
+  padding: 0 1px;
 }
 
 .close__btn {
@@ -52,16 +62,35 @@
   gap: 1rem;
 }
 
+.addForm input {
+  height: 40px;
+}
+
+.addForm textarea {
+  min-height: 60px;
+}
+
 .addForm input,
 .addForm textarea {
   margin-top: 4px;
   min-width: 100%;
   max-width: 100%;
-  height: 40px;
   border-radius: 12px;
   border: 0.5px solid gray;
   padding: 1rem;
   font-size: 11.25pt;
+}
+
+.textarea {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  resize: both;
+  min-height: 100px;
+  line-height: 20px;
+  border: 0.5px solid gray;
+  padding: 1rem;
+  border-radius: 12px;
 }
 
 .required:after {
@@ -78,6 +107,7 @@
   flex-direction: row;
   justify-content: space-evenly;
   gap: 1rem;
+  margin: 0 -1px;
 }
 
 .submit_wrapper button {

@@ -4,16 +4,36 @@
   border-radius: 50px;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   gap: 1rem;
 }
+
+.appList__wrapper:hover {
+  transition: all 0.3s;
+  background-color: gray;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
 .appList__container {
-  flex: 1;
+  flex-grow: 1;
   display: flex;
   flex-direction: row;
   /* justify-content: space-between; */
   align-items: center;
-  gap: var(--padding);
+  gap: 1rem;
   margin-left: 1rem;
+  overflow: hidden;
+}
+
+.appList__container p:nth-child(1) {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden; /* NEW */
+  font-weight: 600;
+}
+
+.appList__container p:nth-child(3) {
+  width: fit-content;
+  min-width: fit-content;
 }
 
 .select__input {

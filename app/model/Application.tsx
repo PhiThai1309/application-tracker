@@ -8,13 +8,13 @@ export enum Status {
 }
 
 export enum ApplicationEnum {
-  companyName = "companyName",
-  position = "position",
-  applicationDate = "applicationDate",
-  jd = "jd",
-  hrEmail = "hrEmail",
-  applyThrough = "applyThrough",
-  status = "status",
+  companyName = "Company Name",
+  position = "Position",
+  applicationDate = "Application Date",
+  jd = "JD",
+  hrEmail = "HR Email",
+  applyThrough = "Apply Through",
+  status = "Status",
 }
 
 export type Application = {

@@ -10,6 +10,8 @@ import { useRouter } from "next/router";
 
 const HomePage = () => {
   const [show, setShow] = useState(false);
+  const [currentApplication, setCurrentApplication] =
+    useState<Application | null>(null);
   const [enumData, setEnumData] = useState<Record<string, number> | null>(null);
   const [datas, setDatas] = useState<Application[]>([]);
   const [reloadFlag, setReloadFlag] = useState(false); // New state to trigger data reload
@@ -46,6 +48,7 @@ const HomePage = () => {
   useEffect(() => {
     fetchData();
     createEnum();
+    setCurrentApplication(null);
   }, [reloadFlag]);
 
   return (
@@ -53,18 +56,28 @@ const HomePage = () => {
       <div className={styles.body__container}>
         <h2>Application Tracker</h2>
         <div className={styles.add__btn}>
-          <AddBtn enable={setShow} />
+          <AddBtn
+            enable={setShow}
+            clearCurrentApplication={setCurrentApplication}
+          />
         </div>
-        <AppListContainer datas={datas} enumData={enumData} />
+        <AppListContainer
+          datas={datas}
+          enumData={enumData}
+          enable={setShow}
+          application={setCurrentApplication}
+        />
       </div>
       {show && (
         <div className={`${styles.modal__container}`}>
           <AddCard
+            application={currentApplication}
             enable={setShow}
             enumData={enumData}
             reload={() => {
               setReloadFlag(!reloadFlag); // Toggle reloadFlag to trigger data reload
             }}
+            addNew
           />
         </div>
       )}

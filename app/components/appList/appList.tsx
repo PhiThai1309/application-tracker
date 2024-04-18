@@ -2,7 +2,8 @@ import { Application, Status } from "@/app/model/Application";
 import styles from "./appList.module.css";
 
 interface ApplicationStatus extends Application {
-  enumStatus: Record<string, number> | null;
+  enumStatus?: Record<string, number> | null;
+  onClick: () => void; // Define onClick handler prop
 }
 
 const AppList: React.FC<ApplicationStatus> = (props) => {
@@ -12,7 +13,7 @@ const AppList: React.FC<ApplicationStatus> = (props) => {
   }-${dateObject.getFullYear()}`;
 
   return (
-    <div className={styles.appList__wrapper}>
+    <div className={styles.appList__wrapper} onClick={props.onClick}>
       <div className={styles.appList__container}>
         <p>{props.companyName}</p>
         <p>{props.position}</p>
