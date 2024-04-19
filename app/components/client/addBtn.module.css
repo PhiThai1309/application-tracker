@@ -1,7 +1,7 @@
 .add_btn__wrapper {
   border-radius: 100%;
   border: 0;
-  background-color: #6100ff;
+  background-color: var(--main-color);
   height: 100%;
   width: 100%;
 
