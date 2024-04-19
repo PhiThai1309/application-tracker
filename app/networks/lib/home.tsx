@@ -17,6 +17,17 @@ export function editApplication(data: Record<string, string>) {
     });
 }
 
+export function changeStatus(id: string, status: Record<string, string>) {
+  return axiosClient
+    .put(baseUrl + `/${id}`, status)
+    .then((data) => {
+      console.log(data);
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+}
+
 export function postApplication(data: Record<string, string>) {
   return axiosClient.post(baseUrl + "/create", data).then((data) => {
     console.log(data);
