@@ -53,19 +53,28 @@ const AddCard: React.FC<AddCardProps> = (props) => {
       // Add the value to the formDataObject using the field name as the key
       formDataObject[key] = value ? value.toString() : "";
     });
-    props.application
-      ? editApplication(formDataObject).then(() => {
+    if (props.application) {
+      editApplication(formDataObject)
+        .then(() => {
+          props.enable(false);
+          props.reload();
+          if (props.application) {
+            props.application.status = status;
+          }
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    } else {
+      postApplication(formDataObject)
+        .then(() => {
           props.enable(false);
           props.reload();
         })
-      : postApplication(formDataObject)
-          .then(() => {
-            props.enable(false);
-            props.reload();
-          })
-          .catch((err) => {
-            console.log(err);
-          });
+        .catch((err) => {
+          console.log(err);
+        });
+    }
   }
 
   function handleDelete() {

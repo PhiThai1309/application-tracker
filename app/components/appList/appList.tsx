@@ -1,6 +1,6 @@
 import { Application, Status } from "@/app/model/Application";
 import styles from "./appList.module.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { changeStatus } from "@/app/networks/lib/home";
 
 interface ApplicationStatus extends Application {
@@ -24,6 +24,11 @@ const AppList: React.FC<ApplicationStatus> = (props) => {
       props.reload();
     });
   }
+
+  //somehow the status does not change on first render so we need to force a rs update
+  useEffect(() => {
+    setStatus(props.status);
+  }, [props.status]);
 
   return (
     <div className={styles.appList__wrapper}>

@@ -46,9 +46,12 @@ const HomePage = () => {
   }
 
   useEffect(() => {
-    fetchData();
     createEnum();
+  }, []);
+
+  useEffect(() => {
     setCurrentApplication(null);
+    fetchData();
   }, [reloadFlag]);
 
   return (

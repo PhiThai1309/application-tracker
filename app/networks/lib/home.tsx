@@ -10,7 +10,7 @@ export function editApplication(data: Record<string, string>) {
   return axiosClient
     .put(baseUrl + `/${data._id}`, data)
     .then((data) => {
-      console.log("done edit");
+      console.log(data);
     })
     .catch((err) => {
       console.log(err);
