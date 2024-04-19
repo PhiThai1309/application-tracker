@@ -130,8 +130,12 @@ const AddCard: React.FC<AddCardProps> = (props) => {
           <button className={styles.close__btn} onClick={onClickHandler}>
             <span className="material-symbols-rounded">close</span>
           </button>
+          {!props.application ? (
+            <h3>New application</h3>
+          ) : (
+            <h3>Edit application</h3>
+          )}
 
-          <h3>New application</h3>
           <form className={styles.addForm} id="form" onSubmit={onSubmitHandler}>
             {Object.entries(formData ?? "").map(
               ([key, value]) =>
@@ -247,7 +251,7 @@ const AddCard: React.FC<AddCardProps> = (props) => {
               )}
 
               <button type="submit" value="Submit" form="form">
-                Submit
+                Save
               </button>
             </div>
           </form>
