@@ -131,3 +131,8 @@
   border: 0.5px solid gray;
   padding: 0 1rem;
 }
+
+.deleteBtn {
+  background-color: red;
+  color: white;
+}

@@ -46,6 +46,11 @@ p {
   font-size: 11.25pt;
 }
 
+button {
+  cursor: pointer;
+  font: var(--font-mono);
+}
+
 select {
   -moz-appearance: none;
   -webkit-appearance: none;

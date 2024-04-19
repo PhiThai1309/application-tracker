@@ -7,6 +7,7 @@ interface AppListContainerProps {
   enumData: Record<string, number> | null;
   enable: (value: boolean) => void;
   application: (value: Application | null) => void;
+  reload: () => void;
 }
 
 const AppListContainer: React.FC<AppListContainerProps> = (props) => {
@@ -20,9 +21,12 @@ const AppListContainer: React.FC<AppListContainerProps> = (props) => {
           enumStatus={props.enumData}
           {...data}
           onClick={() => {
-            console.log(data);
             props.application(data);
             props.enable(true);
+          }}
+          reload={() => {
+            console.log("reload inside");
+            props.reload();
           }}
         />
       ))}

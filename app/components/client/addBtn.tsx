@@ -8,7 +8,6 @@ interface AddBtnModuleProps {
 
 const AddBtn: React.FC<AddBtnModuleProps> = (props) => {
   function onClickHandler() {
-    console.log("press enter");
     props.enable(true);
     props.clearCurrentApplication(null);
     // setShowModal(!showModal);

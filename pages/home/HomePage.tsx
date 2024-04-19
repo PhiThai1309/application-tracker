@@ -66,6 +66,10 @@ const HomePage = () => {
           enumData={enumData}
           enable={setShow}
           application={setCurrentApplication}
+          reload={() => {
+            console.log("reload");
+            setReloadFlag(!reloadFlag); // Toggle reloadFlag to trigger data reload
+          }}
         />
       </div>
       {show && (
@@ -75,9 +79,9 @@ const HomePage = () => {
             enable={setShow}
             enumData={enumData}
             reload={() => {
+              console.log("reload");
               setReloadFlag(!reloadFlag); // Toggle reloadFlag to trigger data reload
             }}
-            addNew
           />
         </div>
       )}

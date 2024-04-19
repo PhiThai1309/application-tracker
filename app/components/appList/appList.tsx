@@ -6,6 +6,7 @@ import { changeStatus } from "@/app/networks/lib/home";
 interface ApplicationStatus extends Application {
   enumStatus?: Record<string, number> | null;
   onClick: () => void; // Define onClick handler prop
+  reload: () => void;
 }
 
 const AppList: React.FC<ApplicationStatus> = (props) => {
@@ -16,12 +17,12 @@ const AppList: React.FC<ApplicationStatus> = (props) => {
   }-${dateObject.getFullYear()}`;
 
   function handleChangeStatus(e: React.ChangeEvent<HTMLSelectElement>): void {
-    console.log(e.target.value);
     setStatus(Number(e.target.value));
     const formDataObject: Record<string, string> = {};
     formDataObject["status"] = String(e.target.value);
-    console.log(formDataObject);
-    changeStatus(props._id?.toString() ?? "", formDataObject);
+    changeStatus(props._id?.toString() ?? "", formDataObject).then(() => {
+      props.reload();
+    });
   }
 
   return (
@@ -36,7 +37,9 @@ const AppList: React.FC<ApplicationStatus> = (props) => {
         id={props.status.toString()}
         className={styles.select__input}
         value={status}
-        onChange={(e) => handleChangeStatus(e)} // Explicitly specify the type of the index expression as 'number'
+        onChange={(e) => {
+          handleChangeStatus(e);
+        }} // Explicitly specify the type of the index expression as 'number'
         required
       >
         {props.enumStatus &&

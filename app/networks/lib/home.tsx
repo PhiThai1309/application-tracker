@@ -10,7 +10,7 @@ export function editApplication(data: Record<string, string>) {
   return axiosClient
     .put(baseUrl + `/${data._id}`, data)
     .then((data) => {
-      console.log(data);
+      console.log("done edit");
     })
     .catch((err) => {
       console.log(err);
@@ -36,6 +36,12 @@ export function postApplication(data: Record<string, string>) {
 
 export function getStatus() {
   return axiosClient.get(baseUrl + "/status");
+}
+
+export function deleteApplication(id: string) {
+  return axiosClient.delete(baseUrl + `/${id}`).then((data) => {
+    console.log(data);
+  });
 }
 
 // export function addProduct(data) {
