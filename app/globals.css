@@ -17,6 +17,8 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+
+  font: var(--font-mono);
 }
 
 html,
@@ -45,11 +47,6 @@ h5 {
 
 p {
   font-size: 11.25pt;
-}
-
-button {
-  cursor: pointer;
-  font: var(--font-mono);
 }
 
 select {
