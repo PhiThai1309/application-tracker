@@ -4,7 +4,6 @@ import { Application, ApplicationEnum } from "@/app/model/Application";
 
 interface AppListContainerProps {
   datas: Application[];
-  enumData: Record<string, { value: number; color: string }> | null;
   enable: (value: boolean) => void;
   application: (value: Application | null) => void;
   reload: () => void;
@@ -18,7 +17,6 @@ const AppListContainer: React.FC<AppListContainerProps> = (props) => {
       {props.datas.map((data) => (
         <AppList
           key={String(data._id)}
-          enumStatus={props.enumData}
           {...data}
           onClick={() => {
             props.application(data);

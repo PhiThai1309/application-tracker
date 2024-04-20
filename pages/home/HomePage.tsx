@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import { Application } from "@/app/model/Application";
 import { getApplication, getStatus } from "@/app/networks/lib/home";
 import { useRouter } from "next/router";
+import { StatusContext } from "@/app/model/StatusContext";
 
 const HomePage = () => {
   const [show, setShow] = useState(false);
@@ -71,7 +72,7 @@ const HomePage = () => {
   }, [reloadFlag]);
 
   return (
-    <>
+    <StatusContext.Provider value={{ status: enumData }}>
       <div className={styles.body__container}>
         <h2>Application Tracker</h2>
         <div className={styles.add__btn}>
@@ -82,7 +83,6 @@ const HomePage = () => {
         </div>
         <AppListContainer
           datas={datas}
-          enumData={enumData}
           enable={setShow}
           application={setCurrentApplication}
           reload={() => {
@@ -96,7 +96,6 @@ const HomePage = () => {
           <AddCard
             application={currentApplication}
             enable={setShow}
-            enumData={enumData}
             reload={() => {
               console.log("reload");
               setReloadFlag(!reloadFlag); // Toggle reloadFlag to trigger data reload
@@ -104,7 +103,7 @@ const HomePage = () => {
           />
         </div>
       )}
-    </>
+    </StatusContext.Provider>
   );
 };
 export default HomePage;

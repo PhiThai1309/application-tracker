@@ -1,4 +1,4 @@
-import { FormEvent, useState, ReactNode } from "react";
+import { FormEvent, useState, ReactNode, useContext } from "react";
 import styles from "./addCard.module.css";
 import { Application, ApplicationEnum } from "@/app/model/Application";
 import {
@@ -7,10 +7,10 @@ import {
   postApplication,
 } from "@/app/networks/lib/home";
 import AddCardComponent from "./component/addCardComponent";
+import { StatusContext } from "@/app/model/StatusContext";
 
 interface AddCardProps {
   application: Application | null;
-  enumData: Record<string, { value: number; color: string }> | null;
   enable: (value: boolean) => void;
   reload: () => void;
 }
@@ -30,6 +30,8 @@ const AddCard: React.FC<AddCardProps> = (props) => {
   function onClickHandler() {
     props.enable(false);
   }
+
+  const statusContext = useContext(StatusContext);
   const currentDate = new Date().toISOString().split("T")[0];
 
   function onSubmitHandler(event: FormEvent<HTMLFormElement>) {
@@ -227,8 +229,9 @@ const AddCard: React.FC<AddCardProps> = (props) => {
                 onChange={(e) => setStatus(e.target.value)}
                 required
               >
-                {props.enumData &&
-                  Object.entries(props.enumData).map(
+                {statusContext &&
+                  statusContext?.status &&
+                  Object.entries(statusContext?.status ?? {}).map(
                     ([name, { value, color }]) => (
                       <option key={value} value={value}>
                         {name}
