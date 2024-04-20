@@ -12,7 +12,10 @@ const HomePage = () => {
   const [show, setShow] = useState(false);
   const [currentApplication, setCurrentApplication] =
     useState<Application | null>(null);
-  const [enumData, setEnumData] = useState<Record<string, number> | null>(null);
+  const [enumData, setEnumData] = useState<Record<
+    string,
+    { value: number; color: string }
+  > | null>(null);
   const [datas, setDatas] = useState<Application[]>([]);
   const [reloadFlag, setReloadFlag] = useState(false); // New state to trigger data reload
 
@@ -26,23 +29,36 @@ const HomePage = () => {
   };
 
   async function createEnum() {
-    const enumData = await getStatus();
-    if (enumData) {
-      // Create an object with enum-like behavior
-      const Status = enumData.data.reduce(
-        (
-          acc: Record<string, number>,
-          { name, value }: { name: string; value: number }
-        ) => {
-          acc[name] = value;
-          return acc;
-        },
-        {} as Record<string, number>
-      );
-      setEnumData(Status);
-      return Status;
+    try {
+      const enumData = await getStatus(); // Assuming getStatus() fetches the JSON data
+
+      if (enumData && enumData.data) {
+        const statusEnum: Record<string, { value: number; color: string }> = {};
+        // Parse enumData.data into an object
+        const dataObject = JSON.parse(enumData.data) as Record<
+          string,
+          { value: number; color: string }
+        >;
+
+        // Iterate over the entries of dataObject
+        Object.entries(dataObject).forEach(
+          ([key, { value, color }]: [
+            string,
+            { value: number; color: string }
+          ]) => {
+            statusEnum[key] = {
+              value: value, // Ensure value is converted to number
+              color: color,
+            };
+          }
+        );
+        setEnumData(statusEnum);
+        return statusEnum;
+      }
+    } catch (error) {
+      console.error(error);
+      return null;
     }
-    return null;
   }
 
   useEffect(() => {

@@ -1,6 +1,6 @@
 import { FormEvent, useState, ReactNode } from "react";
 import styles from "./addCard.module.css";
-import { Application, ApplicationEnum, Status } from "@/app/model/Application";
+import { Application, ApplicationEnum } from "@/app/model/Application";
 import {
   deleteApplication,
   editApplication,
@@ -10,7 +10,7 @@ import AddCardComponent from "./component/addCardComponent";
 
 interface AddCardProps {
   application: Application | null;
-  enumData: Record<string, number> | null;
+  enumData: Record<string, { value: number; color: string }> | null;
   enable: (value: boolean) => void;
   reload: () => void;
 }
@@ -23,7 +23,7 @@ const initState: Application = {
   jd: "",
   hrEmail: "",
   applyThrough: "",
-  status: Status.New, // Assuming Status is an enum defined somewhere
+  status: 1,
 };
 
 const AddCard: React.FC<AddCardProps> = (props) => {
@@ -107,7 +107,7 @@ const AddCard: React.FC<AddCardProps> = (props) => {
 
   const [formData, setFormData] = useState<Application>({
     ...initialState,
-    status: props.application?.status ?? Status.New,
+    status: props.application?.status ?? "1",
   });
 
   const [companyName, setCompanyName] = useState(initialState.companyName);
@@ -228,11 +228,13 @@ const AddCard: React.FC<AddCardProps> = (props) => {
                 required
               >
                 {props.enumData &&
-                  Object.entries(props.enumData).map(([name, value]) => (
-                    <option key={value} value={value}>
-                      {name}
-                    </option>
-                  ))}
+                  Object.entries(props.enumData).map(
+                    ([name, { value, color }]) => (
+                      <option key={value} value={value}>
+                        {name}
+                      </option>
+                    )
+                  )}
               </select>
             </div>
             <div className={styles.submit_wrapper}>

@@ -37,9 +37,3 @@
   width: fit-content;
   min-width: fit-content;
 }
-
-.select__input {
-  padding: 10px 2rem;
-  border-radius: 50px;
-  border: 0;
-}

@@ -4,14 +4,14 @@ import { Application, ApplicationEnum } from "@/app/model/Application";
 
 interface AppListContainerProps {
   datas: Application[];
-  enumData: Record<string, number> | null;
+  enumData: Record<string, { value: number; color: string }> | null;
   enable: (value: boolean) => void;
   application: (value: Application | null) => void;
   reload: () => void;
 }
 
 const AppListContainer: React.FC<AppListContainerProps> = (props) => {
-  console.log(props.datas);
+  // console.log(props.datas);
   return (
     <div className={styles.list__container}>
       {/* render each  application in the list */}
