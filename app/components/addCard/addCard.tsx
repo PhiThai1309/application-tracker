@@ -210,7 +210,7 @@ const AddCard: React.FC<AddCardProps> = (props) => {
                 // value={props.application?.jd.toString() ?? ""}
                 // value={jd}
                 suppressContentEditableWarning={true}
-                onBlur={(e) => setJd(e.currentTarget.textContent?.trim() ?? "")}
+                onBlur={(e) => setJd(e.currentTarget.textContent)}
                 role="textbox"
                 id={ApplicationEnum.jd}
                 contentEditable
@@ -249,13 +249,14 @@ const AddCard: React.FC<AddCardProps> = (props) => {
                 >
                   Delete
                 </button>
-              ) : (
-                <button type="reset" value="Reset">
-                  Reset
-                </button>
-              )}
+              ) : null}
 
-              <button type="submit" value="Submit" form="form">
+              <button
+                type="submit"
+                value="Submit"
+                form="form"
+                className={styles.submit_btn}
+              >
                 Save
               </button>
             </div>

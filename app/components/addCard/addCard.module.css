@@ -119,7 +119,7 @@
   border: 0px;
 }
 
-.submit_wrapper button:nth-child(2) {
+.submit_btn {
   color: white;
   background-color: var(--main-color);
 }
