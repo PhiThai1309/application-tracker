@@ -121,7 +121,7 @@
 
 .submit_wrapper button:nth-child(2) {
   color: white;
-  background-color: #6100ff;
+  background-color: var(--main-color);
 }
 
 .select__input {
@@ -134,6 +134,6 @@
 }
 
 .deleteBtn {
-  background-color: red;
+  background-color: #f32424;
   color: white;
 }
