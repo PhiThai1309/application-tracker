@@ -21,6 +21,17 @@ Welcome to Application Tracker! This project aims to simplify the process of man
 
 - **Status Updates**: Keep track of the progress of each application, from submission to interview to offer, ensuring you never miss an opportunity or forget to follow up.
 
+| Status           | Value | Color     |
+|------------------|-------|-----------|
+| New              | 1     | ![#A3C9AA](https://via.placeholder.com/15/A3C9AA/000000?text=+) #A3C9AA   |
+| Processing       | 2     | ![#FFD93D](https://via.placeholder.com/15/FFD93D/000000?text=+) #FFD93D   |
+| Follow Up Email  | 3     | ![#DAC0A3](https://via.placeholder.com/15/DAC0A3/000000?text=+) #DAC0A3   |
+| Interview        | 4     | ![#FF9800](https://via.placeholder.com/15/FF9800/000000?text=+) #FF9800   |
+| Not Response     | 5     | ![#D09CFA](https://via.placeholder.com/15/D09CFA/000000?text=+) #D09CFA   |
+| Fail             | 6     | ![#FE6244](https://via.placeholder.com/15/FE6244/000000?text=+) #FE6244   |
+
+
+
 - **More features in the future**:
 
 
