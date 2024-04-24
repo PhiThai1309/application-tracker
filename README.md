@@ -1,7 +1,7 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-# GoodGrammar
-![image](https://github.com/PhiThai1309/GoodGrammar/assets/71892904/09034383-d995-4ab0-b3a6-4005329834a8)
+# Application tracker
+<img width="1270" alt="image" src="https://github.com/PhiThai1309/application-tracker/assets/71892904/54e7cfbc-5829-483e-af0f-d01cf73d7ac4">
 
 ## Table of contents
 - [Overview](#Overview)
@@ -12,113 +12,43 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 - [Author](#author)
 
 ## Overview
-Introducing one of the most revolutionary grammar correction tools for authors and scholars called Good Grammar. This tool will make your writing experience much easier by allowing you to upload materials easily. Our system uses the fine-tuned Large Language Model API to correct the English for each paragraph. This ensures that the grammar and clarity are outstanding.
+Welcome to Application Tracker! This project aims to simplify the process of managing job applications by providing a user-friendly interface to track the status of applications submitted to various companies. Whether you're actively job hunting or simply keeping an eye on potential opportunities, Application Tracker offers a streamlined solution for organizing and monitoring your job search journey.
 
 ## Functionalities
-### File upload
-- .docx file types are supported for uploading.
-### Automated Text Refinement
-  - Automatically analyzing and improving each paragraph of the content. The system uses an AI application programming interface (API).
-  - Grammar, typographical problems, word usage, and punctuation are all addressed by this API.
-### Merge and Download
-  -	After receiving responses from the application programming interface (API), the system integrates the modified paragraphs back into the original document.
-  -	After the API has analyzed the document, users can download it for future usage.
-### User Subscription Management
-Users can subscribe to different plans and users with subscriptions are granted access according to the status of their subscriptions.
-  - Free: 2000 words per file, Up to 30 files per week
-  - Novice: 10000 word count, Up to 100 files per week
-  - Expert: Unlimited word count, Unlimited file correction
+- **Effortless Tracking**: Easily input details of your job applications, including company name, position applied for, submission date, and current status.
+  
+- **Intuitive Interface**: Navigate through your applications with ease, thanks to a clean and intuitive user interface designed for efficiency.
+
+- **Status Updates**: Keep track of the progress of each application, from submission to interview to offer, ensuring you never miss an opportunity or forget to follow up.
+
+| Status           | Value | Color     |
+|------------------|-------|-----------|
+| New              | 1     | ![#A3C9AA](https://via.placeholder.com/15/A3C9AA/000000?text=+) #A3C9AA   |
+| Processing       | 2     | ![#FFD93D](https://via.placeholder.com/15/FFD93D/000000?text=+) #FFD93D   |
+| Follow Up Email  | 3     | ![#DAC0A3](https://via.placeholder.com/15/DAC0A3/000000?text=+) #DAC0A3   |
+| Interview        | 4     | ![#FF9800](https://via.placeholder.com/15/FF9800/000000?text=+) #FF9800   |
+| Not Response     | 5     | ![#D09CFA](https://via.placeholder.com/15/D09CFA/000000?text=+) #D09CFA   |
+| Fail             | 6     | ![#FE6244](https://via.placeholder.com/15/FE6244/000000?text=+) #FE6244   |
 
 
-### History management
-  -	Users can browse back to view the uploaded file history as well as download the corrected version text file.
-  -	Users can also delete files from history to clean up the history list for easier file management.
-### Account management
-- Users have full control over their account settings. They can easily change email addresses, connect to other services, set passwords, check active devices, and even delete their account if needed.
-### Payment Integration
-- The integration of third-party payment mechanisms, such as Stripe, makes it possible to have a subscription process that is both secure and seamless.
+
+- **More features in the future**:
+
 
 ## How to run
+### For Back-end:
+Please run Backend first before running the Frontend
+
 ### For Front-end:
 1.	Clone project from Github repository: 
 ```
-clone https://github.com/PhiThai1309/GoodGrammar.git
+clone https://github.com/PhiThai1309/application-tracker
 ```
 2.	Install required packages:
 ```
 npm install
 ```
-3.	Create a new .env file to root of the project to store authentication to Clerk:
-```
-REACT_APP_CLERK_PUBLISHABLE_KEY = pk_test_YWRhcHRlZC1zdGFyZmlzaC00MS5jbGVyay5hY2NvdW50cy5kZXYk
-```
-4.	Run the app:
-```
-npm start
-```
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-### For back-end
-1.	Clone project from Github repository: 
-```
-clone https://github.com/RenuzitV/GoodGrammarBackend.git
-```
-2.	Install the required packages:
-```
-pip install -r requirements.txt
-```
-4.	Create a .env file based on `.env.example`
-5.	Run the app:
-```
-python.exe -m flask run
-```
-## Screenshot
-
-### Login/ Signup
-<img src="https://github.com/PhiThai1309/GoodGrammar/assets/71892904/c8db0987-0954-4187-b62e-297d5cbfd67e">
-
-
-### Grammar page
-<img src="https://github.com/PhiThai1309/GoodGrammar/assets/71892904/05c8aa01-9417-4e1a-b692-b36e30a7cbda">
-
-### History page
-<img src="https://github.com/PhiThai1309/GoodGrammar/assets/71892904/3607b8e5-4ea7-47d8-9667-747d64586763">
-
-### Subscription page
-<img src="https://github.com/PhiThai1309/GoodGrammar/assets/71892904/c13d66f0-a1dc-498e-9f22-184d4da715c9">
-<img src="https://github.com/PhiThai1309/GoodGrammar/assets/71892904/80799289-429b-4c55-bc92-74b901d3b66c">
-
-
-## Built with
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=js" />
-  <img src="https://skillicons.dev/icons?i=css">
-  <img src="https://skillicons.dev/icons?i=react">
-  <img src="https://skillicons.dev/icons?i=vscode">
-</p>
-
--	ReactJS, CSS
--	Github & Git
--	Figma <a href="https://www.figma.com/file/8sXaJ5RSHLgLzVv8ArmgIo/GoodGrammar?type=design&node-id=0%3A1&mode=design&t=K6cdLz3iLBR5Nd5s-1"> (Design link) </a>
-
-## Author
-- Frontend & Designer: Thai Manh Phi
-- Frontend: Le Minh Quan
-- Backend: Nguyen Vu Minh Duy
-- Backend: Trieu Hoang Khang
-- Backend: Trieu Tran Tri Thuc
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-
-
-## Getting Started
-
-First, run the development server:
+3. Run the development server:
 
 ```bash
 npm run dev
@@ -130,11 +60,37 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3001](http://localhost:3001) with your browser to see the result. (port 3000 is reserve for backend)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Screenshot
+
+### Add new application
+<img width="1270" alt="image" src="https://github.com/PhiThai1309/application-tracker/assets/71892904/e48b4214-cd65-490e-8bc7-54846a37eb23">
+
+### Edit application
+<img width="1270" alt="image" src="https://github.com/PhiThai1309/application-tracker/assets/71892904/b25f221a-d2e8-41c9-af77-2aabec3e645a">
+
+## Built with
+Application Tracker is built using the MERN stack:
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=js" />
+  <img src="https://skillicons.dev/icons?i=css">
+  <img src="https://skillicons.dev/icons?i=nextjs">
+  <img src="https://skillicons.dev/icons?i=ts">
+  <img src="https://skillicons.dev/icons?i=express" />
+  <img src="https://skillicons.dev/icons?i=nodejs" />
+  <img src="https://skillicons.dev/icons?i=mongodb">
+  <img src="https://skillicons.dev/icons?i=vscode">
+</p>
+
+-	Frontend: NextJS, Typescript
+-	Backend: MongoDB, NodeJS, ExpressJS
+-	Github & Git
+
+
+## Author
+Thai Manh Phi
 
 ## Learn More
 
@@ -145,8 +101,4 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
