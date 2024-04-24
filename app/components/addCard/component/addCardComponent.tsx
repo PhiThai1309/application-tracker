@@ -5,7 +5,6 @@ interface addCardComponentProps {
   header: string;
   value: string;
   onChange: (value: string) => void;
-  applicationEnum: string;
 }
 
 const AddCardComponent: React.FC<addCardComponentProps> = (props) => {
@@ -19,15 +18,16 @@ const AddCardComponent: React.FC<addCardComponentProps> = (props) => {
 
   return (
     <div>
-      <p>{props.header}</p>
+      {/* <p>{props.header}</p> */}
+      <label htmlFor={props.header}>{props.header}</label>
       <input
         type="text"
         value={props.value}
         onChange={(e) => {
           props.onChange(e.target.value);
         }}
-        name={props.applicationEnum}
-        id={props.applicationEnum}
+        name={props.header}
+        id={props.header}
       />
     </div>
   );

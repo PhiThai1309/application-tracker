@@ -187,12 +187,14 @@ const AddCard: React.FC<AddCardProps> = (props) => {
                           break;
                       }
                     }}
-                    applicationEnum=""
                   />
                 )
             )}
             <div>
-              <p className={styles.required}>Application date</p>
+              <label htmlFor={ApplicationEnum.applicationDate}>
+                {ApplicationEnum.applicationDate}
+              </label>
+              {/* <p className={styles.required}>Application date</p> */}
               <input
                 type="date"
                 value={applicationDate}
@@ -203,7 +205,8 @@ const AddCard: React.FC<AddCardProps> = (props) => {
               />
             </div>
             <div>
-              <p>JD</p>
+              <label htmlFor={ApplicationEnum.jd}>{ApplicationEnum.jd}</label>
+              {/* <p>JD</p> */}
               <span
                 className={styles.textarea}
                 // name={ApplicationEnum.jd}
@@ -219,7 +222,10 @@ const AddCard: React.FC<AddCardProps> = (props) => {
               </span>
             </div>
             <div>
-              <p className={styles.required}>Status</p>
+              <label htmlFor={ApplicationEnum.status}>
+                {ApplicationEnum.status}
+              </label>
+              {/* <p className={styles.required}>Status</p> */}
               <select
                 name={ApplicationEnum.status}
                 id={ApplicationEnum.status}

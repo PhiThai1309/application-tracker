@@ -29,6 +29,7 @@
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden; /* NEW */
+  min-width: fit-content;
   font-weight: 600;
 }
 
