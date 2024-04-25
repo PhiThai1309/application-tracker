@@ -60,7 +60,7 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3001](http://localhost:3001) with your browser to see the result. (port 3000 is reserve for backend)
+Open [http://localhost:3001](http://localhost:8080) with your browser to see the result. (port 3000 is reserve for backend)
 
 
 ## Screenshot
@@ -85,7 +85,7 @@ Application Tracker is built using the MERN stack:
 </p>
 
 -	Frontend: NextJS, Typescript
--	Backend: MongoDB, NodeJS, ExpressJS
+-	Backend: MongoDB, NodeJS, ExpressJS, Mongoose
 -	Github & Git
 
 
