@@ -37,7 +37,7 @@ Welcome to Application Tracker! This project aims to simplify the process of man
 
 ## How to run
 ### For Back-end:
-Please run Backend first before running the Frontend
+Please run Backend first before running the Frontend [Link](https://github.com/PhiThai1309/ApplicationTrackerBackend)
 
 ### For Front-end:
 1.	Clone project from Github repository: 
