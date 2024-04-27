@@ -19,6 +19,12 @@
     </dependency>
   </dependencies>
   <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>3.4.0</version>
+        </plugin>
+    </plugins>
     <finalName>application-tracker</finalName>
   </build>
 </project>
