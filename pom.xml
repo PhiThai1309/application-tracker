@@ -7,9 +7,6 @@
   <version>1.0-SNAPSHOT</version>
   <name>application-tracker Maven Webapp</name>
   <url>http://maven.apache.org</url>
-  <properties>
-    <failOnMissingWebXml>false</failOnMissingWebXml>
-  </properties>
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
