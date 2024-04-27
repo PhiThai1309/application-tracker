@@ -2,6 +2,7 @@
   "name": "application-tracker",
   "version": "0.1.0",
   "private": true,
+  "homepage": "layout",
   "scripts": {
     "dev": "next dev -p 8080",
     "build": "next build",
