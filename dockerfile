@@ -1,5 +1,5 @@
 # Use an official Node.js runtime as the base image
-FROM node
+FROM node:alpine
 
 # Set the working directory in the container
 WORKDIR /app
@@ -8,7 +8,7 @@ WORKDIR /app
 COPY package*.json ./
 
 # Install project dependencies
-RUN npm install
+RUN npm install --verbose
 
 # Copy all source files to the working directory
 COPY . .
