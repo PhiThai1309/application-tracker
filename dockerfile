@@ -14,10 +14,10 @@ RUN npm install --verbose
 COPY . .
 
 # Build the Next.js application
-RUN npm run build
+# RUN npm run build
 
 # Expose the port your app runs on
-EXPOSE 8080
+EXPOSE 3000
 
 # Define the command to run your app
 CMD [ "npm", "run", "dev" ]
