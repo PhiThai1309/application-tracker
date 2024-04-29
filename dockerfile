@@ -13,9 +13,6 @@ RUN npm install --verbose
 # Copy all source files to the working directory
 COPY . .
 
-# Build the Next.js application
-# RUN npm run build
-
 # Expose the port your app runs on
 EXPOSE 3000
 
