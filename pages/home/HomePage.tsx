@@ -74,7 +74,7 @@ const HomePage = () => {
   return (
     <StatusContext.Provider value={{ status: enumData }}>
       <div className={styles.body__container}>
-        <h2>Application Tracker plapla </h2>
+        <h2>Application Tracker</h2>
         <div className={styles.add__btn}>
           <AddBtn
             enable={setShow}
