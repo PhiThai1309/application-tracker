@@ -16,7 +16,7 @@ import axios from "axios";
 // );
 
 const axiosClient = axios.create({
-  baseURL: `http://34.229.92.19:3000/application`,
+  baseURL: `http://34.229.92.19:3000/`,
   headers: {
     Accept: "application/json",
     "Content-Type": "application/json",
