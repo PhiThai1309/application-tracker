@@ -81,6 +81,9 @@ Open [http://localhost:8080](http://localhost:8080) with your browser to see the
 Please access to this link for the full application: http://23.22.173.20:8081/  
 - Here is the CI/CD architecture:
 ![image](https://github.com/PhiThai1309/application-tracker/assets/71892904/2f929d25-4d43-42a2-ac56-cd445893292f)
+- Jenkins jobs:
+<img width="1171" alt="image" src="https://github.com/PhiThai1309/application-tracker/assets/71892904/7ac0607e-6d05-4e46-a858-7e05d3277d2a">
+
 
 
 ## Screenshot
