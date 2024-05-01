@@ -18,6 +18,9 @@ Welcome to Application Tracker! This project aims to simplify the process of man
 > This application can be hosted locally or deployed using CI/CD pipelines. For detailed instructions on how to run it, please refer to the [How to run](#How-to-run) section.
 
 ## Functionalities
+
+- **CI/CD**: Continuous Integration and Continuous Deployment pipelines are set up to automate deployment processes. http://23.22.173.20:8081/  
+
 - **Effortless Tracking**: Easily input details of your job applications, including company name, position applied for, submission date, and current status.
   
 - **Intuitive Interface**: Navigate through your applications with ease, thanks to a clean and intuitive user interface designed for efficiency.
@@ -32,8 +35,6 @@ Welcome to Application Tracker! This project aims to simplify the process of man
 | Interview        | 4     | ![#FF9800](https://via.placeholder.com/15/FF9800/000000?text=+) #FF9800   |
 | Not Response     | 5     | ![#D09CFA](https://via.placeholder.com/15/D09CFA/000000?text=+) #D09CFA   |
 | Fail             | 6     | ![#FE6244](https://via.placeholder.com/15/FE6244/000000?text=+) #FE6244   |
-
-- CI/CD: Continuous Integration and Continuous Deployment pipelines are set up to automate deployment processes. http://23.22.173.20:8081/  
 
 - **More features in the future**:  Additional functionalities and improvements are planned for future updates.
 
