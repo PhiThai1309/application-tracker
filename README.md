@@ -79,6 +79,7 @@ Open [http://localhost:8080](http://localhost:8080) with your browser to see the
 
 ### For Front-end using CI/CD:
 Please access to this link for the full application: http://23.22.173.20:8081/  
+![image](https://github.com/PhiThai1309/application-tracker/assets/71892904/2f929d25-4d43-42a2-ac56-cd445893292f)
 
 
 ## Screenshot
@@ -102,10 +103,10 @@ Application Tracker is built using the MERN stack:
   <img src="https://skillicons.dev/icons?i=vscode">
 </p>
 
--	Frontend: NextJS, Typescript
--	Backend: MongoDB, NodeJS, ExpressJS, Mongoose
--	CI/CD: AWS EC2, AWS SSM, Docker, Jenkins, Github hooks
--	Github & Git
+-	**Frontend**: NextJS, Typescript
+-	**Backend**: MongoDB, NodeJS, ExpressJS, Mongoose
+-	**CI/CD**: AWS EC2, AWS SSM, Docker, Jenkins, Github hooks
+-	**Version controll**: Github & Git
 
 
 ## Author
