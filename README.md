@@ -68,7 +68,7 @@ bun dev
 ```
 
 5. Run the application:
-Open [http://localhost:3001](http://localhost:8080) with your browser to see the result. (port 3000 is reserve for backend)
+Open [http://localhost:8080](http://localhost:8080) with your browser to see the result.
 
 
 ### For Front-end using CI/CD:
