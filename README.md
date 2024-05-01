@@ -33,9 +33,9 @@ Welcome to Application Tracker! This project aims to simplify the process of man
 | Not Response     | 5     | ![#D09CFA](https://via.placeholder.com/15/D09CFA/000000?text=+) #D09CFA   |
 | Fail             | 6     | ![#FE6244](https://via.placeholder.com/15/FE6244/000000?text=+) #FE6244   |
 
+- CI/CD: Continuous Integration and Continuous Deployment pipelines are set up to automate deployment processes. http://23.22.173.20:8081/  
 
-
-- **More features in the future**:
+- **More features in the future**:  Additional functionalities and improvements are planned for future updates.
 
 
 ## How to run
