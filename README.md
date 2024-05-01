@@ -1,4 +1,4 @@
-![image](https://github.com/PhiThai1309/application-tracker/assets/71892904/061571e9-c4f3-43fd-9007-ead0e9ea1991)This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 # Application tracker
 <img width="1270" alt="image" src="https://github.com/PhiThai1309/application-tracker/assets/71892904/54e7cfbc-5829-483e-af0f-d01cf73d7ac4">
