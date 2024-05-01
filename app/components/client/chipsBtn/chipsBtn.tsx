@@ -16,7 +16,7 @@ const ChipsBtn: React.FC<ChipsBtnProps> = (props) => {
   const [color, setColor] = useState("");
 
   function handleChangeStatus(e: React.ChangeEvent<HTMLSelectElement>): void {
-    setStatus(Number(e.target.value));
+    // setStatus(Number(e.target.value));
     const formDataObject: Record<string, string> = {};
     formDataObject["status"] = String(e.target.value);
     changeStatus(props._id?.toString() ?? "", formDataObject).then(() => {
