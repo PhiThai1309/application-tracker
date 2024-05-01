@@ -12,7 +12,10 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 - [Author](#author)
 
 ## Overview
-Welcome to Application Tracker! This project aims to simplify the process of managing job applications by providing a user-friendly interface to track the status of applications submitted to various companies. Whether you're actively job hunting or simply keeping an eye on potential opportunities, Application Tracker offers a streamlined solution for organizing and monitoring your job search journey.
+Welcome to Application Tracker! This project aims to simplify the process of managing job applications by providing a user-friendly interface to track the status of applications submitted to various companies. 
+
+> [!IMPORTANT]
+> This application can be hosted locally and deployed using CI/CD pipelines. For detailed instructions on how to run it, please refer to the [How to run](#How-to-run) section.
 
 ## Functionalities
 - **Effortless Tracking**: Easily input details of your job applications, including company name, position applied for, submission date, and current status.
@@ -36,19 +39,23 @@ Welcome to Application Tracker! This project aims to simplify the process of man
 
 
 ## How to run
+- [Localhost](#For-Front-end-using-localhost)
+- [CI/CD](#For-Front-end-using-CI/CD)
+
 ### For Back-end:
 Please run Backend first before running the Frontend [Link](https://github.com/PhiThai1309/ApplicationTrackerBackend)
 
-### For Front-end:
-1.	Clone project from Github repository: 
+### For Front-end using localhost:
+1. Ensure the back-end application is running on 'http://localhost:3000/'
+2. Clone project from Github repository: 
 ```
 clone https://github.com/PhiThai1309/application-tracker
 ```
-2.	Install required packages:
+3. Install required packages:
 ```
 npm install
 ```
-3. Run the development server:
+4. Run the development server:
 
 ```bash
 npm run dev
@@ -60,7 +67,12 @@ pnpm dev
 bun dev
 ```
 
+5. Run the application:
 Open [http://localhost:3001](http://localhost:8080) with your browser to see the result. (port 3000 is reserve for backend)
+
+
+### For Front-end using CI/CD:
+Please access to this link for the full application: http://23.22.173.20:8081/  
 
 
 ## Screenshot
@@ -86,6 +98,7 @@ Application Tracker is built using the MERN stack:
 
 -	Frontend: NextJS, Typescript
 -	Backend: MongoDB, NodeJS, ExpressJS, Mongoose
+-	CI/CD: AWS EC2, AWS SSM, Docker, Jenkins, Github hooks
 -	Github & Git
 
 
