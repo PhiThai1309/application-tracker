@@ -47,10 +47,15 @@ Please run Backend first before running the Frontend [Link](https://github.com/P
 
 ### For Front-end using localhost:
 1. Ensure the back-end application is running on 'http://localhost:3000/'
+
 2. Clone project from Github repository (on the main branch): 
 ```
 clone https://github.com/PhiThai1309/application-tracker
 ```
+
+> [!NOTE]
+> For simplicity, you can access to this page without cloning the project: https://application-tracker-sandy.vercel.app/
+
 3. Install required packages:
 ```
 npm install
