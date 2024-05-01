@@ -1,4 +1,4 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+![image](https://github.com/PhiThai1309/application-tracker/assets/71892904/061571e9-c4f3-43fd-9007-ead0e9ea1991)This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 # Application tracker
 <img width="1270" alt="image" src="https://github.com/PhiThai1309/application-tracker/assets/71892904/54e7cfbc-5829-483e-af0f-d01cf73d7ac4">
@@ -14,8 +14,8 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 ## Overview
 Welcome to Application Tracker! This project aims to simplify the process of managing job applications by providing a user-friendly interface to track the status of applications submitted to various companies. 
 
-> [!IMPORTANT]
-> This application can be hosted locally and deployed using CI/CD pipelines. For detailed instructions on how to run it, please refer to the [How to run](#How-to-run) section.
+> [!NOTE]
+> This application can be hosted locally or deployed using CI/CD pipelines. For detailed instructions on how to run it, please refer to the [How to run](#How-to-run) section.
 
 ## Functionalities
 - **Effortless Tracking**: Easily input details of your job applications, including company name, position applied for, submission date, and current status.
@@ -47,7 +47,7 @@ Please run Backend first before running the Frontend [Link](https://github.com/P
 
 ### For Front-end using localhost:
 1. Ensure the back-end application is running on 'http://localhost:3000/'
-2. Clone project from Github repository: 
+2. Clone project from Github repository (on the main branch): 
 ```
 clone https://github.com/PhiThai1309/application-tracker
 ```
