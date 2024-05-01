@@ -104,6 +104,11 @@ Application Tracker is built using the MERN stack:
   <img src="https://skillicons.dev/icons?i=express" />
   <img src="https://skillicons.dev/icons?i=nodejs" />
   <img src="https://skillicons.dev/icons?i=mongodb">
+  <img src="https://skillicons.dev/icons?i=aws">
+  <img src="https://skillicons.dev/icons?i=jenkins">
+  <img src="https://skillicons.dev/icons?i=github">
+  <img src="https://skillicons.dev/icons?i=git">
+  <img src="https://skillicons.dev/icons?i=npm">
   <img src="https://skillicons.dev/icons?i=vscode">
 </p>
 
