@@ -78,7 +78,10 @@ Open [http://localhost:8080](http://localhost:8080) with your browser to see the
 
 
 ### For Front-end using CI/CD:
-Please access to this link for the full application: http://23.22.173.20:8081/  
+> Please access to this link for the full application: http://23.22.173.20:8081/
+
+Implemented an intricate system of Continuous Integration and Continuous Deployment (CI/CD) pipelines leveraging Jenkins to automate the deployment workflow. This involved configuring Jenkins to seamlessly synchronize with GitHub repositories, fetching the latest code changes, and initiating automated builds. Utilizing Docker, the code was encapsulated into containerized images, ensuring consistency across various environments. These images were then deployed onto Elastic Compute Cloud (EC2) instances, serving as the hosting infrastructure for both the front-end and back-end applications.
+
 - Here is the CI/CD architecture:
 ![image](https://github.com/PhiThai1309/application-tracker/assets/71892904/2f929d25-4d43-42a2-ac56-cd445893292f)
 - Jenkins jobs:
